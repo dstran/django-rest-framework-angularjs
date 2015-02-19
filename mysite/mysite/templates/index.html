@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="Post" class="no-js">
+<head lang="en">
+    <base href="/">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-theme.min.css">
+</head>
+<!--<body ng-controller="AppController">-->
+<body ng-controller="MainController">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Emma's Daybook</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" >
+          <form name="loginForm" class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="bg"></div>
+    <div class="jumbotron"> Hello world!
+    </div>
+    <ng-view></ng-view>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery.1.11.1.min.js"><\/script>')</script>
+	<script src="{{ STATIC_URL }}js/libs/bootstrap.min.js"></script>
+	<script src="{{ STATIC_URL }}js/libs/angular.min.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/angular-route.min.js"></script>
+	<!--<script src="{{ STATIC_URL }}js/libs/angular-resource.min.js"></script>-->
+    <!--<script src="{{ STATIC_URL }}js/libs/angular-cookies.min.js"></script>-->
+    <!--<script src="{{ STATIC_URL }}js/libs/ui-bootstrap-tpls-0.3.0.min.js"></script>-->
+	<script src="{{ STATIC_URL }}js/app/app.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/app-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/question-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/choice-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/services/posts-service.js"></script>
+</body>
+</html>
